@@ -3,139 +3,116 @@ export default function Home() {
     <main className="relative min-h-screen flex flex-col overflow-hidden">
       <BackgroundFX />
 
-      <header className="w-full relative z-10">
-        <div className="mx-auto max-w-6xl px-6 py-6 flex items-center justify-between">
-          <a href="/" className="flex items-center gap-2.5 group">
-            <Logo />
-            <span className="text-[15px] font-semibold tracking-tight text-[var(--color-ink)] group-hover:text-white transition-colors">
-              VaultPoint Systems
+      <header className="w-full relative z-10 border-b hairline">
+        <div className="mx-auto max-w-6xl px-6 py-5 flex items-center justify-between">
+          <a href="/" className="flex items-center gap-3">
+            <Mark />
+            <span className="font-display text-[18px] tracking-tight text-[var(--color-ink)] leading-none">
+              VaultPoint <span className="italic text-[var(--color-accent)]">Systems</span>
             </span>
           </a>
-          <nav className="hidden sm:flex items-center gap-7 text-sm text-[var(--color-ink-dim)]">
-            <a href="#services" className="hover:text-white transition-colors">Services</a>
-            <a href="#contact" className="hover:text-white transition-colors">Contact</a>
+          <nav className="hidden sm:flex items-center gap-8">
+            <a href="#service" className="label hover:text-[var(--color-ink)] transition-colors">Service</a>
+            <a href="#contact" className="label hover:text-[var(--color-ink)] transition-colors">Contact</a>
           </nav>
-          <a
-            href="mailto:vaultpointsystems@outlook.com"
-            className="sm:hidden text-sm text-[var(--color-ink-dim)] hover:text-white transition-colors"
-          >
-            Contact
-          </a>
         </div>
       </header>
 
       <section className="relative z-10">
-        <div className="mx-auto max-w-6xl px-6 pt-20 pb-24 md:pt-28 md:pb-32 w-full">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight leading-[1.05] max-w-3xl">
-            Cybersecurity built
-            <br className="hidden sm:block" />
-            <span className="text-[var(--color-ink-dim)]"> for modern businesses.</span>
-          </h1>
-          <p className="mt-6 max-w-xl text-[var(--color-ink-dim)] text-base sm:text-lg leading-relaxed">
-            VaultPoint Systems delivers accessible, scalable security for
-            startups and small businesses &mdash; without the enterprise price tag.
-          </p>
-          <div className="mt-9 flex flex-wrap items-center gap-3">
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center rounded-md bg-[var(--color-accent)] px-5 py-2.5 text-sm font-medium text-white hover:bg-[#3a66e6] transition-colors"
-            >
-              Get in touch
-            </a>
-            <a
-              href="#services"
-              className="inline-flex items-center justify-center rounded-md border border-white/10 px-5 py-2.5 text-sm font-medium text-[var(--color-ink)] hover:bg-white/[0.04] hover:border-white/20 transition-colors"
-            >
-              See services
-            </a>
+        <div className="mx-auto max-w-6xl px-6 pt-24 pb-28 md:pt-32 md:pb-36 grid md:grid-cols-12 gap-10 items-end">
+          <div className="md:col-span-8">
+            <p className="label mb-8 flex items-center gap-3">
+              <span className="inline-block h-px w-8 bg-[var(--color-accent)]" />
+              VaultPoint Systems
+            </p>
+            <h1 className="font-display text-[44px] sm:text-[64px] md:text-[84px] leading-[0.95] tracking-[-0.02em] text-[var(--color-ink)]">
+              Cybersecurity,
+              <br />
+              <span className="italic text-[var(--color-accent)]">re&shy;framed</span>
+              <br />
+              for everyone else.
+            </h1>
           </div>
-        </div>
-      </section>
-
-      <section id="services" className="relative z-10 border-t border-white/5">
-        <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
-          <div className="flex items-end justify-between flex-wrap gap-4 mb-12">
-            <div>
-              <p className="text-xs uppercase tracking-[0.22em] text-[var(--color-accent)] mb-3">Services</p>
-              <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight">What we offer</h2>
+          <div className="md:col-span-4">
+            <p className="text-[var(--color-ink-dim)] text-base sm:text-lg leading-relaxed max-w-sm">
+              Enterprise-grade security has always priced out the businesses
+              that need it most. We&rsquo;re changing that &mdash; starting with
+              startups and small teams.
+            </p>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <a
+                href="#contact"
+                className="inline-flex items-center justify-center bg-[var(--color-accent)] px-5 py-3 text-sm font-medium text-[#1a1206] hover:bg-[var(--color-ink)] transition-colors"
+              >
+                Get in touch
+              </a>
+              <a
+                href="#service"
+                className="inline-flex items-center justify-center border hairline px-5 py-3 text-sm font-medium text-[var(--color-ink)] hover:border-[var(--color-accent)] hover:text-[var(--color-accent)] transition-colors"
+              >
+                Our work
+              </a>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="max-w-xl">
-            <ServiceCard
-              title="AI Security Audit"
-              description="An affordable, self-serve security audit for SMBs and startups. Coming soon."
-              icon={<IconShield />}
-            />
+      <section id="service" className="relative z-10 border-t hairline">
+        <div className="mx-auto max-w-6xl px-6 py-20 md:py-28 grid md:grid-cols-12 gap-10">
+          <div className="md:col-span-4">
+            <p className="label mb-4">01 &mdash; Service</p>
+            <h2 className="font-display text-3xl sm:text-4xl tracking-tight">
+              What we&rsquo;re <span className="italic text-[var(--color-accent)]">building</span>.
+            </h2>
+          </div>
+          <div className="md:col-span-8">
+            <div className="border-t hairline pt-8">
+              <div className="flex items-baseline justify-between gap-6 flex-wrap">
+                <h3 className="font-display text-2xl sm:text-3xl tracking-tight">
+                  AI Security Audit
+                </h3>
+                <p className="label">Coming soon</p>
+              </div>
+              <p className="mt-4 text-[var(--color-ink-dim)] leading-relaxed max-w-2xl">
+                An affordable, self-serve security audit purpose-built for SMBs
+                and startups.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="contact" className="relative z-10 border-t border-white/5">
-        <div className="mx-auto max-w-6xl px-6 py-20 md:py-24">
-          <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/[0.04] to-transparent p-8 sm:p-12">
-            <p className="text-xs uppercase tracking-[0.22em] text-[var(--color-accent)] mb-3">Contact</p>
-            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight max-w-2xl">
-              Have a security concern, or just curious?
+      <section id="contact" className="relative z-10 border-t hairline">
+        <div className="mx-auto max-w-6xl px-6 py-20 md:py-28 grid md:grid-cols-12 gap-10 items-end">
+          <div className="md:col-span-7">
+            <p className="label mb-4">02 &mdash; Contact</p>
+            <h2 className="font-display text-3xl sm:text-5xl tracking-tight leading-[1.0]">
+              Have a question, concern, or just curious&thinsp;
+              <span className="italic text-[var(--color-accent)]">?</span>
             </h2>
-            <p className="mt-4 max-w-xl text-[var(--color-ink-dim)]">
-              Reach out directly &mdash; we read every message.
-            </p>
+          </div>
+          <div className="md:col-span-5">
+            <p className="text-[var(--color-ink-dim)] mb-6">Write to us directly.</p>
             <a
               href="mailto:vaultpointsystems@outlook.com"
-              className="mt-7 inline-flex items-center gap-2 rounded-md bg-[var(--color-accent)] px-5 py-2.5 text-sm font-medium text-white hover:bg-[#3a66e6] transition-colors"
+              className="font-mono text-sm sm:text-base text-[var(--color-ink)] border-b border-[var(--color-accent)] pb-1 hover:text-[var(--color-accent)] transition-colors break-all"
             >
-              <IconMail />
               vaultpointsystems@outlook.com
             </a>
           </div>
         </div>
       </section>
 
-      <footer className="w-full border-t border-white/5 relative z-10">
-        <div className="mx-auto max-w-6xl px-6 py-7 flex flex-col sm:flex-row gap-2 sm:gap-0 items-start sm:items-center justify-between text-sm text-[var(--color-ink-dim)]">
-          <div className="flex items-center gap-2">
-            <Logo small />
-            <span>&copy; {new Date().getFullYear()} VaultPoint Systems</span>
+      <footer className="w-full border-t hairline relative z-10">
+        <div className="mx-auto max-w-6xl px-6 py-8 flex flex-col sm:flex-row gap-3 sm:gap-0 items-start sm:items-center justify-between">
+          <div className="flex items-center gap-3">
+            <Mark small />
+            <span className="label">&copy; {new Date().getFullYear()} VaultPoint Systems</span>
           </div>
-          <a
-            href="mailto:vaultpointsystems@outlook.com"
-            className="hover:text-white transition-colors"
-          >
-            vaultpointsystems@outlook.com
-          </a>
+          <span className="label">vaultpoint.systems</span>
         </div>
       </footer>
     </main>
-  );
-}
-
-function ServiceCard({
-  title,
-  description,
-  icon,
-  tag,
-}: {
-  title: string;
-  description: string;
-  icon: React.ReactNode;
-  tag?: string;
-}) {
-  return (
-    <div className="relative rounded-xl border border-white/10 bg-white/[0.02] p-6">
-      <div className="flex items-center justify-between mb-5">
-        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[var(--color-accent)]/10 text-[var(--color-accent)] ring-1 ring-[var(--color-accent)]/20">
-          {icon}
-        </div>
-        {tag && (
-          <span className="text-[10px] uppercase tracking-[0.18em] text-[var(--color-accent)] border border-[var(--color-accent)]/30 rounded-full px-2 py-0.5">
-            {tag}
-          </span>
-        )}
-      </div>
-      <h3 className="text-lg font-semibold tracking-tight">{title}</h3>
-      <p className="mt-2 text-sm leading-relaxed text-[var(--color-ink-dim)]">{description}</p>
-    </div>
   );
 }
 
@@ -147,68 +124,42 @@ function BackgroundFX() {
         className="pointer-events-none absolute inset-0 -z-10"
         style={{
           background:
-            "radial-gradient(1200px 600px at 70% -10%, rgba(79,124,255,0.20), transparent 60%), radial-gradient(800px 500px at 10% 110%, rgba(79,124,255,0.10), transparent 60%)",
+            "radial-gradient(900px 500px at 85% 0%, rgba(212,168,90,0.10), transparent 60%), radial-gradient(700px 400px at 0% 100%, rgba(212,168,90,0.05), transparent 70%)",
         }}
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 opacity-[0.25]"
+        className="pointer-events-none absolute inset-0 -z-10"
         style={{
           backgroundImage:
-            "linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px)",
-          backgroundSize: "48px 48px",
-          maskImage:
-            "radial-gradient(ellipse at top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 50%, transparent 80%)",
-          WebkitMaskImage:
-            "radial-gradient(ellipse at top, rgba(0,0,0,1) 0%, rgba(0,0,0,0.5) 50%, transparent 80%)",
+            "repeating-linear-gradient(90deg, rgba(241,237,226,0.025) 0 1px, transparent 1px 96px)",
         }}
       />
     </>
   );
 }
 
-function Logo({ small }: { small?: boolean }) {
-  const size = small ? 18 : 28;
+function Mark({ small }: { small?: boolean }) {
+  const size = small ? 22 : 28;
   return (
     <svg
       width={size}
       height={size}
-      viewBox="0 0 32 32"
+      viewBox="0 0 40 40"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden
     >
+      <rect x="2.5" y="2.5" width="35" height="35" stroke="var(--color-accent)" strokeWidth="1.3" />
       <path
-        d="M16 2.5 28 8v9.5c0 7.2-5.1 11.4-12 13-6.9-1.6-12-5.8-12-13V8l12-5.5Z"
+        d="M11 14 L20 26 L29 14"
         stroke="var(--color-accent)"
         strokeWidth="1.6"
-        strokeLinejoin="round"
+        strokeLinecap="square"
+        strokeLinejoin="miter"
+        fill="none"
       />
-      <path
-        d="M11.5 16.2 14.8 19.5 21 13.2"
-        stroke="var(--color-accent)"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function IconShield() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" />
-      <path d="m9 12 2 2 4-4" />
-    </svg>
-  );
-}
-
-function IconMail() {
-  return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-      <rect x="3" y="5" width="18" height="14" rx="2" />
-      <path d="m3 7 9 6 9-6" />
+      <circle cx="20" cy="20" r="1.6" fill="var(--color-accent)" />
     </svg>
   );
 }

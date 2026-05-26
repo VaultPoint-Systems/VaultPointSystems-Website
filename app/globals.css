@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #0a0f1c;
-  --color-bg-2: #0e1626;
-  --color-ink: #e6ecf5;
-  --color-ink-dim: #9aa6bd;
-  --color-accent: #4f7cff;
-  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --color-bg: #0c0c10;
+  --color-bg-2: #131319;
+  --color-ink: #f1ede2;
+  --color-ink-dim: #8a8578;
+  --color-rule: rgba(241, 237, 226, 0.08);
+  --color-accent: #d4a85a;
+  --color-accent-deep: #a37f3a;
 }
 
 html, body {
   background: var(--color-bg);
   color: var(--color-ink);
-  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -20,3 +20,17 @@ html, body {
 * { box-sizing: border-box; }
 
 a { color: inherit; text-decoration: none; }
+
+.font-display { font-family: var(--font-display), Georgia, serif; font-feature-settings: "ss01", "ss02"; }
+.font-sans { font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif; }
+.font-mono { font-family: var(--font-mono), ui-monospace, monospace; }
+
+.label {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-ink-dim);
+}
+
+.hairline { border-color: var(--color-rule); }
