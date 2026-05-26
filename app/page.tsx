@@ -1,18 +1,21 @@
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col">
-      <header className="border-b border-[var(--color-rule)] bg-[var(--color-bg)]">
-        <div className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
-          <a href="/" className="flex items-center gap-2.5">
-            <Mark />
-            <span className="text-[15px] font-semibold tracking-tight">VaultPoint Systems</span>
+      <TickerBar />
+
+      <header className="border-b border-[var(--color-ink)]">
+        <div className="mx-auto max-w-[1200px] px-6 lg:px-10 h-16 flex items-center justify-between">
+          <a href="/" className="flex items-baseline gap-2">
+            <span className="text-[16px] font-semibold tracking-tight">VaultPoint</span>
+            <span className="font-mono text-[14px] text-[var(--color-accent)] -translate-y-px">//</span>
+            <span className="text-[16px] font-semibold tracking-tight">Systems</span>
           </a>
-          <nav className="flex items-center gap-7 text-sm text-[var(--color-ink-dim)]">
-            <a href="#product" className="hover:text-[var(--color-ink)] transition-colors">Product</a>
-            <a href="#about" className="hover:text-[var(--color-ink)] transition-colors">About</a>
+          <nav className="flex items-center gap-7 text-sm">
+            <a href="#product" className="text-[var(--color-ink-dim)] hover:text-[var(--color-ink)] transition-colors">Product</a>
+            <a href="#about" className="text-[var(--color-ink-dim)] hover:text-[var(--color-ink)] transition-colors">About</a>
             <a
               href="mailto:vaultpointsystems@outlook.com"
-              className="inline-flex items-center h-9 px-3.5 bg-[#0c0d10] text-white rounded-md font-medium hover:bg-[var(--color-accent)] transition-colors"
+              className="inline-flex items-center h-9 px-4 bg-[var(--color-ink)] text-[var(--color-bg)] font-medium hover:bg-[var(--color-accent)] transition-colors"
             >
               Contact
             </a>
@@ -20,105 +23,88 @@ export default function Home() {
         </div>
       </header>
 
-      <section className="border-b border-[var(--color-rule)]">
-        <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24 grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          <div className="lg:col-span-6">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[var(--color-accent)] mb-5">
-              Security, made approachable
-            </p>
-            <h1 className="text-[40px] sm:text-[52px] leading-[1.05] tracking-[-0.025em] font-semibold">
-              Cybersecurity for the businesses traditionally priced out of it.
+      <Section index="§01" label="Introduction" first>
+        <div className="grid lg:grid-cols-12 gap-x-10 gap-y-10">
+          <div className="lg:col-span-9">
+            <h1 className="text-[44px] sm:text-[64px] lg:text-[88px] leading-[0.96] tracking-[-0.028em] font-semibold">
+              Cybersecurity<br />
+              for the businesses<br />
+              <span className="text-[var(--color-accent)]">priced out</span> of it.
             </h1>
-            <p className="mt-6 text-lg leading-[1.6] text-[var(--color-ink-dim)] max-w-xl">
-              VaultPoint Systems builds accessible security tooling for startups
-              and small businesses &mdash; without enterprise pricing or
-              enterprise complexity.
+          </div>
+          <div className="lg:col-span-3 lg:pt-3">
+            <p className="text-[15px] leading-[1.65] text-[var(--color-ink-dim)] border-t border-[var(--color-ink)] pt-4">
+              VaultPoint Systems builds accessible security tooling for
+              startups and small businesses &mdash; without enterprise
+              pricing or enterprise complexity.
             </p>
-            <div className="mt-9 flex items-center gap-3 flex-wrap">
+            <div className="mt-6 flex flex-col items-start gap-3">
               <a
                 href="mailto:vaultpointsystems@outlook.com"
-                className="inline-flex items-center h-11 px-5 bg-[var(--color-accent)] text-white rounded-md font-medium text-[15px] hover:bg-[#0a4536] transition-colors"
+                className="inline-flex items-center h-11 px-5 bg-[var(--color-accent)] text-white font-medium text-[14px] hover:bg-[var(--color-accent-deep)] transition-colors"
               >
-                Get in touch
+                Get in touch &rarr;
               </a>
               <a
                 href="#product"
-                className="inline-flex items-center h-11 px-5 rounded-md font-medium text-[15px] text-[var(--color-ink)] border border-[var(--color-rule)] bg-white hover:border-[var(--color-ink)] transition-colors"
+                className="text-[13px] text-[var(--color-ink-dim)] underline underline-offset-4 decoration-[var(--color-rule-strong)] hover:text-[var(--color-ink)] hover:decoration-[var(--color-ink)] transition-colors"
               >
                 See what we&rsquo;re building
               </a>
             </div>
           </div>
+        </div>
+      </Section>
 
-          <div className="lg:col-span-6">
+      <Section index="§02" label="Product">
+        <div className="grid lg:grid-cols-12 gap-x-10 gap-y-12">
+          <div className="lg:col-span-5">
+            <p className="chapter mb-3">Item No. 001</p>
+            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight leading-[1.1] mb-5">
+              A security audit you can <em className="text-[var(--color-accent)] not-italic">actually</em> run yourself.
+            </h2>
+            <p className="text-[16px] leading-[1.65] text-[var(--color-ink-dim)] max-w-md">
+              Our first product: an affordable, self-serve security audit
+              purpose-built for SMBs and startups. We&rsquo;ll share more as
+              we get closer to launch.
+            </p>
+
+            <div className="mt-8 border-t border-[var(--color-rule)]">
+              <SpecRow term="Status" value="In development" />
+              <SpecRow term="Audience" value="Startups, SMBs" />
+              <SpecRow term="Model" value="Self-serve, AI-assisted" />
+              <SpecRow term="Launching" value="2026" />
+            </div>
+          </div>
+
+          <div className="lg:col-span-7">
             <AuditPreview />
           </div>
         </div>
-      </section>
+      </Section>
 
-      <section id="product" className="border-b border-[var(--color-rule)]">
-        <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
-          <div className="grid lg:grid-cols-12 gap-10 lg:gap-16">
-            <div className="lg:col-span-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[var(--color-ink-mute)] mb-4">
-                Product
-              </p>
-              <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight leading-[1.1]">
-                Our first product: a security audit you can actually run yourself.
-              </h2>
-            </div>
-            <div className="lg:col-span-8">
-              <div className="rounded-xl border border-[var(--color-rule)] bg-[var(--color-surface)] p-8 sm:p-10">
-                <div className="flex items-baseline justify-between gap-6 flex-wrap mb-4">
-                  <h3 className="text-2xl font-semibold tracking-tight">AI Security Audit</h3>
-                  <span className="font-mono text-xs text-[var(--color-ink-mute)]">In development</span>
-                </div>
-                <p className="text-[17px] leading-[1.65] text-[var(--color-ink-dim)] max-w-2xl">
-                  An affordable, self-serve security audit purpose-built for
-                  SMBs and startups. We&rsquo;ll share more details as we get
-                  closer to launch.
-                </p>
-                <div className="mt-8 grid sm:grid-cols-3 gap-6 pt-6 border-t border-[var(--color-rule)]">
-                  <Highlight title="Self-serve" body="Run it yourself. No long sales process, no enterprise consultant." />
-                  <Highlight title="Right-priced" body="Built to be affordable for early-stage and small teams." />
-                  <Highlight title="Actionable" body="Findings come with a prioritized plan, not a 200-page PDF." />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="about" className="border-b border-[var(--color-rule)]">
-        <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24 grid lg:grid-cols-12 gap-10 lg:gap-16">
-          <div className="lg:col-span-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[var(--color-ink-mute)] mb-4">
-              About
-            </p>
-          </div>
-          <div className="lg:col-span-8">
-            <p className="text-2xl sm:text-3xl leading-[1.3] tracking-tight font-medium text-[var(--color-ink)] max-w-3xl">
-              VaultPoint Systems is an early-stage technology company. We
-              think the businesses most exposed to cyber risk are the ones
-              least served by today&rsquo;s security industry &mdash; and
-              we&rsquo;re here to fix that.
+      <Section index="§03" label="About">
+        <div className="grid lg:grid-cols-12 gap-10">
+          <div className="lg:col-span-12">
+            <p className="text-[26px] sm:text-[34px] lg:text-[40px] leading-[1.2] tracking-tight font-medium max-w-4xl">
+              The businesses most exposed to cyber risk are the ones
+              least served by the security industry. We exist to close
+              that gap &mdash; with tooling priced and shaped for the
+              teams that actually need it.
             </p>
           </div>
         </div>
-      </section>
+      </Section>
 
-      <section id="contact">
-        <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24 grid lg:grid-cols-12 gap-10 lg:gap-16 items-end">
-          <div className="lg:col-span-6">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[var(--color-ink-mute)] mb-4">
-              Contact
-            </p>
-            <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight leading-[1.1]">
-              Questions, concerns, or just curious?
+      <Section index="§04" label="Contact" last>
+        <div className="grid lg:grid-cols-12 gap-x-10 gap-y-8 items-end">
+          <div className="lg:col-span-7">
+            <h2 className="text-3xl sm:text-5xl font-semibold tracking-tight leading-[1.05]">
+              Questions, concerns,<br />or just curious?
             </h2>
           </div>
-          <div className="lg:col-span-6">
-            <p className="text-[var(--color-ink-dim)] mb-4">Write to us directly.</p>
+          <div className="lg:col-span-5">
+            <p className="text-[var(--color-ink-dim)] mb-4">Reach us directly &mdash; one inbox, no funnel.</p>
             <a
               href="mailto:vaultpointsystems@outlook.com"
               className="font-mono text-lg sm:text-xl text-[var(--color-ink)] hover:text-[var(--color-accent)] transition-colors break-all"
@@ -127,100 +113,147 @@ export default function Home() {
             </a>
           </div>
         </div>
-      </section>
+      </Section>
 
-      <footer className="border-t border-[var(--color-rule)]">
-        <div className="mx-auto max-w-6xl px-6 py-8 flex flex-col sm:flex-row gap-3 sm:gap-0 items-start sm:items-center justify-between text-sm">
-          <div className="flex items-center gap-2.5">
-            <Mark />
-            <span className="text-[var(--color-ink-dim)]">&copy; {new Date().getFullYear()} VaultPoint Systems</span>
+      <footer className="border-t-2 border-[var(--color-ink)] bg-[var(--color-bg-2)]">
+        <div className="mx-auto max-w-[1200px] px-6 lg:px-10 py-6 flex flex-col sm:flex-row gap-3 sm:gap-0 items-start sm:items-center justify-between">
+          <div className="flex items-baseline gap-2">
+            <span className="text-[14px] font-semibold">VaultPoint</span>
+            <span className="font-mono text-[12px] text-[var(--color-accent)]">//</span>
+            <span className="text-[14px] font-semibold">Systems</span>
           </div>
-          <span className="font-mono text-xs text-[var(--color-ink-mute)]">vaultpoint.systems</span>
+          <span className="ticker">&copy; {new Date().getFullYear()} &middot; vaultpoint.systems</span>
         </div>
       </footer>
     </main>
   );
 }
 
-function Highlight({ title, body }: { title: string; body: string }) {
+function TickerBar() {
   return (
-    <div>
-      <h4 className="text-sm font-semibold tracking-tight mb-1.5">{title}</h4>
-      <p className="text-sm leading-[1.55] text-[var(--color-ink-dim)]">{body}</p>
+    <div className="border-b border-[var(--color-rule)] bg-[var(--color-bg-2)]">
+      <div className="mx-auto max-w-[1200px] px-6 lg:px-10 h-8 flex items-center justify-between ticker">
+        <span>VPS · 001</span>
+        <span className="hidden sm:inline">Cybersecurity for everyone else</span>
+        <span>Est. 2026</span>
+      </div>
     </div>
   );
 }
 
-function Mark() {
+function Section({
+  index,
+  label,
+  children,
+  first,
+  last,
+}: {
+  index: string;
+  label: string;
+  children: React.ReactNode;
+  first?: boolean;
+  last?: boolean;
+}) {
   return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden>
-      <rect x="2" y="2" width="20" height="20" rx="4" fill="var(--color-accent)" />
-      <path d="M7 12 L10.5 15.5 L17 9" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="none" />
-    </svg>
+    <section className={last ? "" : "border-b border-[var(--color-rule)]"}>
+      <div className="mx-auto max-w-[1200px] px-6 lg:px-10 py-16 lg:py-24">
+        <div className={`flex items-baseline justify-between mb-10 ${first ? "" : ""}`}>
+          <p className="ticker">
+            <span className="text-[var(--color-accent)]">{index}</span>
+            <span className="mx-2 text-[var(--color-rule-strong)]">/</span>
+            <span>{label}</span>
+          </p>
+          <span className="hidden sm:block ticker">vaultpoint.systems</span>
+        </div>
+        <div className="rule-thick mb-12" />
+        {children}
+      </div>
+    </section>
+  );
+}
+
+function SpecRow({ term, value }: { term: string; value: string }) {
+  return (
+    <div className="flex items-baseline justify-between border-b border-[var(--color-rule)] py-3">
+      <span className="ticker">{term}</span>
+      <span className="font-mono text-[13px] text-[var(--color-ink)]">{value}</span>
+    </div>
   );
 }
 
 function AuditPreview() {
   const rows = [
-    { label: "Identity & access", status: "Pass", tone: "ok" as const },
-    { label: "Data handling", status: "Review", tone: "warn" as const },
-    { label: "Cloud configuration", status: "Pass", tone: "ok" as const },
-    { label: "Vendor & 3rd party", status: "Pass", tone: "ok" as const },
-    { label: "Endpoint posture", status: "Review", tone: "warn" as const },
-    { label: "Incident readiness", status: "Pass", tone: "ok" as const },
+    { n: "01", label: "Identity & access controls", status: "Pass", tone: "ok" as const },
+    { n: "02", label: "Data handling & retention", status: "Review", tone: "warn" as const },
+    { n: "03", label: "Cloud configuration", status: "Pass", tone: "ok" as const },
+    { n: "04", label: "Vendor & third-party risk", status: "Pass", tone: "ok" as const },
+    { n: "05", label: "Endpoint posture", status: "Review", tone: "warn" as const },
+    { n: "06", label: "Incident readiness", status: "Pass", tone: "ok" as const },
   ];
 
   return (
-    <div className="relative">
-      <div className="rounded-xl border border-[var(--color-rule)] bg-[var(--color-surface)] shadow-[0_8px_30px_-12px_rgba(12,13,16,0.12)] overflow-hidden">
-        <div className="flex items-center justify-between px-5 py-3 border-b border-[var(--color-rule)] bg-[#fbfaf7]">
-          <div className="flex items-center gap-2">
-            <span className="h-2.5 w-2.5 rounded-full bg-[#e2e0d8]" />
-            <span className="h-2.5 w-2.5 rounded-full bg-[#e2e0d8]" />
-            <span className="h-2.5 w-2.5 rounded-full bg-[#e2e0d8]" />
-          </div>
-          <span className="font-mono text-[11px] text-[var(--color-ink-mute)]">vaultpoint.systems / audit</span>
-          <span className="w-12" />
-        </div>
+    <div className="border-2 border-[var(--color-ink)] bg-[var(--color-paper)]">
+      <div className="border-b-2 border-[var(--color-ink)] px-5 py-2.5 flex items-center justify-between bg-[var(--color-surface)]">
+        <span className="ticker">Audit report &middot; Specimen</span>
+        <span className="font-mono text-[11px] text-[var(--color-ink-mute)]">VPS-AUD / 2026</span>
+      </div>
 
-        <div className="p-6 sm:p-7">
-          <div className="flex items-baseline justify-between mb-1">
-            <p className="text-xs font-semibold uppercase tracking-[0.12em] text-[var(--color-ink-mute)]">Audit summary</p>
-            <span className="font-mono text-[11px] text-[var(--color-ink-mute)]">Concept preview</span>
-          </div>
+      <div className="grid grid-cols-3 border-b border-[var(--color-rule)]">
+        <FormCell label="Issued to" value="ACME Co." />
+        <FormCell label="Scope" value="Full stack" />
+        <FormCell label="Date" value="2026 · 05 · 26" last />
+      </div>
 
-          <div className="mt-4 flex items-end gap-6">
-            <div>
-              <p className="text-[44px] sm:text-[52px] leading-none font-semibold tracking-tight text-[var(--color-ink)]">
-                78<span className="text-[var(--color-ink-mute)] text-2xl">/100</span>
-              </p>
-              <p className="mt-1.5 text-xs text-[var(--color-ink-dim)]">Overall posture &middot; Good</p>
+      <div className="px-6 py-6">
+        <div className="flex items-end gap-6">
+          <div>
+            <p className="ticker mb-2">Overall posture</p>
+            <p className="text-[48px] sm:text-[60px] leading-none font-semibold tracking-tight">
+              78<span className="text-[var(--color-ink-mute)] text-2xl">/100</span>
+            </p>
+          </div>
+          <div className="flex-1 pb-2">
+            <div className="h-1.5 bg-[var(--color-bg-2)]">
+              <div className="score-bar" />
             </div>
-            <div className="flex-1">
-              <div className="h-2 rounded-full bg-[#eeece4] overflow-hidden">
-                <div className="score-bar" />
-              </div>
-              <div className="mt-2 flex justify-between font-mono text-[10px] text-[var(--color-ink-mute)]">
-                <span>0</span><span>50</span><span>100</span>
-              </div>
+            <div className="mt-1.5 flex justify-between font-mono text-[10px] text-[var(--color-ink-mute)]">
+              <span>0</span><span>50</span><span>100</span>
             </div>
-          </div>
-
-          <div className="mt-7 border-t border-[var(--color-rule)]">
-            {rows.map((r) => (
-              <div key={r.label} className="flex items-center justify-between py-3 border-b border-[var(--color-rule)] last:border-b-0">
-                <div className="flex items-center gap-3">
-                  <span className={`h-1.5 w-1.5 rounded-full ${r.tone === "ok" ? "dot-ok" : "dot-warn"}`} />
-                  <span className="text-sm text-[var(--color-ink)]">{r.label}</span>
-                </div>
-                <span className={`font-mono text-[11px] px-2 py-0.5 rounded ${r.tone === "ok" ? "tag-ok" : "tag-warn"}`}>
-                  {r.status}
-                </span>
-              </div>
-            ))}
           </div>
         </div>
       </div>
+
+      <div className="border-t-2 border-[var(--color-ink)]">
+        <div className="px-6 py-2 flex items-center justify-between border-b border-[var(--color-rule)] bg-[var(--color-surface)]">
+          <span className="ticker">Findings</span>
+          <span className="ticker">Status</span>
+        </div>
+        {rows.map((r) => (
+          <div key={r.n} className="px-6 py-3 flex items-center justify-between border-b border-[var(--color-rule)] last:border-b-0">
+            <div className="flex items-center gap-4">
+              <span className="font-mono text-[11px] text-[var(--color-ink-mute)] w-6">{r.n}</span>
+              <span className="text-sm text-[var(--color-ink)]">{r.label}</span>
+            </div>
+            <span className={`font-mono text-[11px] px-2 py-0.5 ${r.tone === "ok" ? "tag-ok" : "tag-warn"}`}>
+              {r.status}
+            </span>
+          </div>
+        ))}
+      </div>
+
+      <div className="border-t-2 border-[var(--color-ink)] px-6 py-3 flex items-center justify-between bg-[var(--color-surface)]">
+        <span className="ticker">Authorized &middot; VaultPoint Systems</span>
+        <span className="font-mono text-[11px] text-[var(--color-ink-mute)]">— preview —</span>
+      </div>
+    </div>
+  );
+}
+
+function FormCell({ label, value, last }: { label: string; value: string; last?: boolean }) {
+  return (
+    <div className={`px-5 py-3 ${last ? "" : "border-r border-[var(--color-rule)]"}`}>
+      <p className="ticker mb-1">{label}</p>
+      <p className="font-mono text-[13px] text-[var(--color-ink)]">{value}</p>
     </div>
   );
 }
