@@ -1,13 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #0a0a0b;
-  --color-panel: #111113;
-  --color-ink: #ededed;
-  --color-ink-dim: #8a8a8f;
-  --color-ink-mute: #5a5a60;
-  --color-rule: #1f1f22;
-  --color-accent: #c4895a;
+  --color-bg: #faf9f5;
+  --color-surface: #ffffff;
+  --color-ink: #0c0d10;
+  --color-ink-dim: #5b5f66;
+  --color-ink-mute: #8b8f97;
+  --color-rule: #e7e4db;
+  --color-accent: #0c5743;
+  --color-accent-2: #e8efe9;
+  --color-warn: #b8541a;
+  --color-warn-2: #f4e6d6;
 }
 
 html, body {
@@ -23,4 +26,10 @@ a { color: inherit; text-decoration: none; }
 .font-sans { font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
 .font-mono { font-family: var(--font-mono), ui-monospace, monospace; }
 
-::selection { background: var(--color-accent); color: #0a0a0b; }
+::selection { background: var(--color-accent); color: #ffffff; }
+
+.score-bar { width: 78%; height: 100%; background: var(--color-accent); }
+.dot-ok { background: var(--color-accent); }
+.dot-warn { background: var(--color-warn); }
+.tag-ok { background: var(--color-accent-2); color: var(--color-accent); }
+.tag-warn { background: var(--color-warn-2); color: var(--color-warn); }
