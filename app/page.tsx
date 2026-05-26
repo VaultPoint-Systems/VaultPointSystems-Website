@@ -30,13 +30,13 @@ export default function Home() {
             Coming soon
           </p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight leading-[1.05] max-w-3xl">
-            Secure, scalable technology
+            Cybersecurity built
             <br className="hidden sm:block" />
             <span className="text-[var(--color-ink-dim)]"> for modern businesses.</span>
           </h1>
           <p className="mt-6 max-w-xl text-[var(--color-ink-dim)] text-base sm:text-lg leading-relaxed">
-            VaultPoint Systems is a technology company building dependable
-            infrastructure and security solutions. We&rsquo;re launching soon.
+            VaultPoint Systems delivers accessible, scalable security for
+            startups and small businesses. We&rsquo;re launching soon.
           </p>
         </div>
       </section>
