@@ -34,7 +34,7 @@ export default function Home() {
           <div className="lg:col-span-3 lg:pt-3">
             <p className="text-[15px] leading-[1.65] text-[var(--color-ink-dim)] border-t border-[var(--color-ink)] pt-4">
               VaultPoint Systems builds accessible security tooling for
-              startups and small businesses &mdash; without enterprise
+              startups and small businesses, without enterprise
               pricing or enterprise complexity.
             </p>
             <div className="mt-6 flex flex-col items-start gap-3">
@@ -88,7 +88,7 @@ export default function Home() {
             <p className="text-[26px] sm:text-[34px] lg:text-[40px] leading-[1.2] tracking-tight font-medium max-w-4xl">
               The businesses most exposed to cyber risk are the ones
               least served by the security industry. We exist to close
-              that gap &mdash; with tooling priced and shaped for the
+              that gap, with tooling priced and shaped for the
               teams that actually need it.
             </p>
           </div>
@@ -103,7 +103,7 @@ export default function Home() {
             </h2>
           </div>
           <div className="lg:col-span-5">
-            <p className="text-[var(--color-ink-dim)] mb-4">Reach us directly &mdash; one inbox, no funnel.</p>
+            <p className="text-[var(--color-ink-dim)] mb-4">Reach us directly.</p>
             <a
               href="mailto:vaultpointsystems@outlook.com"
               className="font-mono text-lg sm:text-xl text-[var(--color-ink)] hover:text-[var(--color-accent)] transition-colors break-all"
@@ -241,7 +241,7 @@ function AuditPreview() {
 
       <div className="border-t-2 border-[var(--color-ink)] px-6 py-3 flex items-center justify-between bg-[var(--color-surface)]">
         <span className="ticker">Authorized &middot; VaultPoint Systems</span>
-        <span className="font-mono text-[11px] text-[var(--color-ink-mute)]">— preview —</span>
+        <span className="font-mono text-[11px] text-[var(--color-ink-mute)]">preview</span>
       </div>
     </div>
   );
