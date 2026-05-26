@@ -5,17 +5,16 @@ export default function Home() {
 
       <header className="border-b border-[var(--color-ink)]">
         <div className="mx-auto max-w-[1200px] px-6 lg:px-10 h-16 flex items-center justify-between">
-          <a href="/" className="flex items-baseline gap-2">
-            <span className="text-[16px] font-semibold tracking-tight">VaultPoint</span>
-            <span className="font-mono text-[14px] text-[var(--color-accent)] -translate-y-px">//</span>
-            <span className="text-[16px] font-semibold tracking-tight">Systems</span>
+          <a href="/" className="flex items-center gap-2.5">
+            <Mark />
+            <span className="text-[16px] font-semibold tracking-tight">VaultPoint Systems</span>
           </a>
           <nav className="flex items-center gap-7 text-sm">
             <a href="#product" className="text-[var(--color-ink-dim)] hover:text-[var(--color-ink)] transition-colors">Product</a>
             <a href="#about" className="text-[var(--color-ink-dim)] hover:text-[var(--color-ink)] transition-colors">About</a>
             <a
               href="mailto:vaultpointsystems@outlook.com"
-              className="inline-flex items-center h-9 px-4 bg-[var(--color-ink)] text-[var(--color-bg)] font-medium hover:bg-[var(--color-accent)] transition-colors"
+              className="inline-flex items-center h-9 px-4 bg-[var(--color-ink)] text-white font-semibold hover:bg-[var(--color-accent)] transition-colors"
             >
               Contact
             </a>
@@ -41,7 +40,7 @@ export default function Home() {
             <div className="mt-6 flex flex-col items-start gap-3">
               <a
                 href="mailto:vaultpointsystems@outlook.com"
-                className="inline-flex items-center h-11 px-5 bg-[var(--color-accent)] text-white font-medium text-[14px] hover:bg-[var(--color-accent-deep)] transition-colors"
+                className="inline-flex items-center h-11 px-5 bg-[var(--color-accent)] text-white font-semibold text-[14px] tracking-tight hover:bg-[var(--color-accent-deep)] transition-colors"
               >
                 Get in touch &rarr;
               </a>
@@ -117,10 +116,9 @@ export default function Home() {
 
       <footer className="border-t-2 border-[var(--color-ink)] bg-[var(--color-bg-2)]">
         <div className="mx-auto max-w-[1200px] px-6 lg:px-10 py-6 flex flex-col sm:flex-row gap-3 sm:gap-0 items-start sm:items-center justify-between">
-          <div className="flex items-baseline gap-2">
-            <span className="text-[14px] font-semibold">VaultPoint</span>
-            <span className="font-mono text-[12px] text-[var(--color-accent)]">//</span>
-            <span className="text-[14px] font-semibold">Systems</span>
+          <div className="flex items-center gap-2">
+            <Mark small />
+            <span className="text-[14px] font-semibold tracking-tight">VaultPoint Systems</span>
           </div>
           <span className="ticker">&copy; {new Date().getFullYear()} &middot; vaultpoint.systems</span>
         </div>
@@ -246,6 +244,36 @@ function AuditPreview() {
         <span className="font-mono text-[11px] text-[var(--color-ink-mute)]">— preview —</span>
       </div>
     </div>
+  );
+}
+
+function Mark({ small }: { small?: boolean }) {
+  const s = small ? 22 : 28;
+  return (
+    <svg width={s} height={s} viewBox="0 0 40 40" fill="none" aria-hidden xmlns="http://www.w3.org/2000/svg">
+      {/* vault */}
+      <rect x="3" y="3" width="34" height="34" stroke="currentColor" strokeWidth="1.6" />
+      {/* corner registration ticks */}
+      <path d="M3 8 L7 8 M3 32 L7 32 M33 8 L37 8 M33 32 L37 32" stroke="currentColor" strokeWidth="1.2" />
+      {/* V */}
+      <path
+        d="M10 12 L20 27 L30 12"
+        stroke="var(--color-accent)"
+        strokeWidth="2.2"
+        strokeLinecap="square"
+        strokeLinejoin="miter"
+        fill="none"
+      />
+      {/* point (filled diamond at apex of V) */}
+      <rect
+        x="18"
+        y="25"
+        width="4"
+        height="4"
+        transform="rotate(45 20 27)"
+        fill="var(--color-accent)"
+      />
+    </svg>
   );
 }
 
