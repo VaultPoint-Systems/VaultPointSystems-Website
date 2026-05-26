@@ -27,8 +27,7 @@ export default function Home() {
           <div className="lg:col-span-9">
             <h1 className="text-[44px] sm:text-[64px] lg:text-[88px] leading-[0.96] tracking-[-0.028em] font-semibold">
               Cybersecurity<br />
-              for the businesses<br />
-              <span className="text-[var(--color-accent)]">priced out</span> of it.
+              built for <span className="text-[var(--color-accent)]">small businesses</span>.
             </h1>
           </div>
           <div className="lg:col-span-3 lg:pt-3">
