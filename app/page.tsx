@@ -1,8 +1,8 @@
+import { ContactForm } from "./components/ContactForm";
+
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col">
-      <TickerBar />
-
       <header className="border-b border-[var(--color-ink)]">
         <div className="mx-auto max-w-[1200px] px-6 lg:px-10 h-16 flex items-center justify-between">
           <a href="/" className="flex items-center gap-2.5">
@@ -95,20 +95,20 @@ export default function Home() {
       </Section>
 
       <Section index="§04" label="Contact" last>
-        <div className="grid lg:grid-cols-12 gap-x-10 gap-y-8 items-end">
-          <div className="lg:col-span-7">
+        <div className="grid lg:grid-cols-12 gap-x-10 gap-y-10">
+          <div className="lg:col-span-5">
             <h2 className="text-3xl sm:text-5xl font-semibold tracking-tight leading-[1.05]">
               Questions, concerns,<br />or just curious?
             </h2>
-          </div>
-          <div className="lg:col-span-5">
-            <p className="text-[var(--color-ink-dim)] mb-4">Reach us directly.</p>
-            <a
-              href="mailto:vaultpointsystems@outlook.com"
-              className="font-mono text-lg sm:text-xl text-[var(--color-ink)] hover:text-[var(--color-accent)] transition-colors break-all"
-            >
+            <p className="mt-5 text-[var(--color-ink-dim)] max-w-sm">
+              Send us a note. One inbox, no funnel. We read every message.
+            </p>
+            <p className="mt-5 font-mono text-[13px] text-[var(--color-ink-mute)] break-all">
               vaultpointsystems@outlook.com
-            </a>
+            </p>
+          </div>
+          <div className="lg:col-span-7">
+            <ContactForm />
           </div>
         </div>
       </Section>
@@ -119,22 +119,10 @@ export default function Home() {
             <Mark small />
             <span className="text-[14px] font-semibold tracking-tight">VaultPoint Systems</span>
           </div>
-          <span className="ticker">&copy; {new Date().getFullYear()} &middot; vaultpoint.systems</span>
+          <span className="ticker">&copy; {new Date().getFullYear()} VaultPoint Systems LLC &middot; vaultpoint.systems</span>
         </div>
       </footer>
     </main>
-  );
-}
-
-function TickerBar() {
-  return (
-    <div className="border-b border-[var(--color-rule)] bg-[var(--color-bg-2)]">
-      <div className="mx-auto max-w-[1200px] px-6 lg:px-10 h-8 flex items-center justify-between ticker">
-        <span>VPS · 001</span>
-        <span className="hidden sm:inline">Cybersecurity for everyone else</span>
-        <span>Est. 2026</span>
-      </div>
-    </div>
   );
 }
 
@@ -160,7 +148,6 @@ function Section({
             <span className="mx-2 text-[var(--color-rule-strong)]">/</span>
             <span>{label}</span>
           </p>
-          <span className="hidden sm:block ticker">vaultpoint.systems</span>
         </div>
         <div className="rule-thick mb-12" />
         {children}
@@ -250,28 +237,16 @@ function Mark({ small }: { small?: boolean }) {
   const s = small ? 22 : 28;
   return (
     <svg width={s} height={s} viewBox="0 0 40 40" fill="none" aria-hidden xmlns="http://www.w3.org/2000/svg">
-      {/* vault */}
-      <rect x="3" y="3" width="34" height="34" stroke="currentColor" strokeWidth="1.6" />
-      {/* corner registration ticks */}
-      <path d="M3 8 L7 8 M3 32 L7 32 M33 8 L37 8 M33 32 L37 32" stroke="currentColor" strokeWidth="1.2" />
-      {/* V */}
+      <rect x="2" y="2" width="36" height="36" stroke="currentColor" strokeWidth="1.4" />
       <path
-        d="M10 12 L20 27 L30 12"
+        d="M9 10 L20 30 L31 10"
         stroke="var(--color-accent)"
-        strokeWidth="2.2"
+        strokeWidth="3.4"
         strokeLinecap="square"
         strokeLinejoin="miter"
         fill="none"
       />
-      {/* point (filled diamond at apex of V) */}
-      <rect
-        x="18"
-        y="25"
-        width="4"
-        height="4"
-        transform="rotate(45 20 27)"
-        fill="var(--color-accent)"
-      />
+      <circle cx="20" cy="21.5" r="2.4" fill="var(--color-accent)" />
     </svg>
   );
 }
