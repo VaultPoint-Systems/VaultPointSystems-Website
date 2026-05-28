@@ -14,14 +14,29 @@ export function ContactForm() {
     const data = Object.fromEntries(new FormData(form).entries());
     setState({ status: "sending" });
     try {
-      const res = await fetch("/api/contact", {
+      // Honeypot check
+      if (data.company && (typeof data.company === "string" && data.company.trim() !== "")) {
+        setState({ status: "sent" });
+        form.reset();
+        return;
+      }
+
+      const payload = {
+        ...data,
+        access_key: "64da4e52-09dc-42aa-b4d8-394cc87026c3",
+      };
+
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "content-type": "application/json" },
-        body: JSON.stringify(data),
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
       });
       const json = await res.json();
-      if (!res.ok || !json.ok) {
-        setState({ status: "error", error: json.error || "Could not send. Please try again." });
+      if (!res.ok || !json.success) {
+        setState({ status: "error", error: json.message || "Could not send. Please try again." });
         return;
       }
       setState({ status: "sent" });
