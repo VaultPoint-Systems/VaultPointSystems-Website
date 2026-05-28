@@ -15,7 +15,7 @@ export function ContactForm() {
     setState({ status: "sending" });
     try {
       // Honeypot check
-      if (data.company && (typeof data.company === "string" && data.company.trim() !== "")) {
+      if (data.botcheck && (typeof data.botcheck === "string" && data.botcheck.trim() !== "")) {
         setState({ status: "sent" });
         form.reset();
         return;
@@ -64,12 +64,15 @@ export function ContactForm() {
 
   return (
     <form onSubmit={onSubmit} noValidate className="grid gap-4">
+      <input type="hidden" name="from_name" value="VPS Contact Form" />
       <Field label="Name" name="name" type="text" autoComplete="name" required />
       <Field label="Email" name="email" type="email" autoComplete="email" required />
+      <Field label="Company" name="company" type="text" autoComplete="organization" />
+      <Field label="Subject" name="subject" type="text" required />
       <Field label="Message" name="message" textarea required />
       <input
         type="text"
-        name="company"
+        name="botcheck"
         tabIndex={-1}
         autoComplete="off"
         className="hidden"
