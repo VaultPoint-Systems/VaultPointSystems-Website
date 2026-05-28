@@ -1,5 +1,8 @@
 import { ContactForm } from "./components/ContactForm";
 
+const CONTACT_EMAIL = "contact@vaultpoint.systems";
+const SITE_DOMAIN = "vaultpoint.systems";
+
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col">
@@ -13,10 +16,10 @@ export default function Home() {
             <a href="#product" className="text-[var(--color-ink-dim)] hover:text-[var(--color-ink)] transition-colors">Product</a>
             <a href="#about" className="text-[var(--color-ink-dim)] hover:text-[var(--color-ink)] transition-colors">About</a>
             <a
-              href="mailto:vaultpointsystems@outlook.com"
+              href="#contact"
               className="inline-flex items-center h-9 px-4 bg-[var(--color-ink)] text-white font-semibold hover:bg-[var(--color-accent)] transition-colors"
             >
-              Contact
+              Get a free assessment
             </a>
           </nav>
         </div>
@@ -26,8 +29,8 @@ export default function Home() {
         <div className="grid lg:grid-cols-12 gap-x-10 gap-y-10">
           <div className="lg:col-span-9">
             <h1 className="text-[44px] sm:text-[64px] lg:text-[88px] leading-[0.96] tracking-[-0.028em] font-semibold">
-              Cybersecurity<br />
-              built for <span className="text-[var(--color-accent)]">small businesses</span>.
+              Security compliance<br />
+              without the <span className="text-[var(--color-accent)]">enterprise friction</span>.
             </h1>
           </div>
           <div className="lg:col-span-3 lg:pt-3">
@@ -38,10 +41,10 @@ export default function Home() {
             </p>
             <div className="mt-6 flex flex-col items-start gap-3">
               <a
-                href="mailto:vaultpointsystems@outlook.com"
+                href="#contact"
                 className="inline-flex items-center h-11 px-5 bg-[var(--color-accent)] text-white font-semibold text-[14px] tracking-tight hover:bg-[var(--color-accent-deep)] transition-colors"
               >
-                Get in touch &rarr;
+                Get a free assessment &rarr;
               </a>
               <a
                 href="#product"
@@ -54,7 +57,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section index="§02" label="Product">
+      <Section index="§02" label="Product" id="product">
         <div className="grid lg:grid-cols-12 gap-x-10 gap-y-12">
           <div className="lg:col-span-5">
             <p className="chapter mb-3">Item No. 001</p>
@@ -81,7 +84,7 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section index="§03" label="About">
+      <Section index="§03" label="About" id="about">
         <div className="grid lg:grid-cols-12 gap-10">
           <div className="lg:col-span-12">
             <p className="text-[26px] sm:text-[34px] lg:text-[40px] leading-[1.2] tracking-tight font-medium max-w-4xl">
@@ -94,17 +97,17 @@ export default function Home() {
         </div>
       </Section>
 
-      <Section index="§04" label="Contact" last>
+      <Section index="§04" label="Contact" last id="contact">
         <div className="grid lg:grid-cols-12 gap-x-10 gap-y-10">
           <div className="lg:col-span-5">
             <h2 className="text-3xl sm:text-5xl font-semibold tracking-tight leading-[1.05]">
               Questions, concerns,<br />or just curious?
             </h2>
             <p className="mt-5 text-[var(--color-ink-dim)] max-w-sm">
-              Send us a note. One inbox, no funnel. We read every message.
+              Send us a note. We read every message.
             </p>
             <p className="mt-5 font-mono text-[13px] text-[var(--color-ink-mute)] break-all">
-              vaultpointsystems@outlook.com
+              {CONTACT_EMAIL}
             </p>
           </div>
           <div className="lg:col-span-7">
@@ -119,7 +122,7 @@ export default function Home() {
             <Mark small />
             <span className="text-[14px] font-semibold tracking-tight">VaultPoint Systems</span>
           </div>
-          <span className="ticker">&copy; {new Date().getFullYear()} VaultPoint Systems LLC &middot; vaultpoint.systems</span>
+          <span className="ticker">&copy; {new Date().getFullYear()} VaultPoint Systems LLC &middot; {SITE_DOMAIN}</span>
         </div>
       </footer>
     </main>
@@ -132,15 +135,17 @@ function Section({
   children,
   first,
   last,
+  id,
 }: {
   index: string;
   label: string;
   children: React.ReactNode;
   first?: boolean;
   last?: boolean;
+  id?: string;
 }) {
   return (
-    <section className={last ? "" : "border-b border-[var(--color-rule)]"}>
+    <section id={id} className={last ? "" : "border-b border-[var(--color-rule)]"}>
       <div className="mx-auto max-w-[1200px] px-6 lg:px-10 py-16 lg:py-24">
         <div className={`flex items-baseline justify-between mb-10 ${first ? "" : ""}`}>
           <p className="ticker">
@@ -197,8 +202,9 @@ function AuditPreview() {
             </p>
           </div>
           <div className="flex-1 pb-2">
-            <div className="h-1.5 bg-[var(--color-bg-2)]">
-              <div className="score-bar" />
+            <div className="h-1.5 bg-[var(--color-bg-2)] overflow-hidden">
+              {/* Note the score-bar class applied here */}
+              <div className="score-bar" /> 
             </div>
             <div className="mt-1.5 flex justify-between font-mono text-[10px] text-[var(--color-ink-mute)]">
               <span>0</span><span>50</span><span>100</span>
@@ -234,20 +240,21 @@ function AuditPreview() {
 }
 
 function Mark({ small }: { small?: boolean }) {
-  const s = small ? 22 : 28;
+  const s = small ? 22 : 32;
   return (
-    <svg width={s} height={s} viewBox="0 0 40 40" fill="none" aria-hidden xmlns="http://www.w3.org/2000/svg">
-      <rect x="2" y="2" width="36" height="36" stroke="currentColor" strokeWidth="1.4" />
-      <path
-        d="M9 10 L20 30 L31 10"
-        stroke="var(--color-accent)"
-        strokeWidth="3.4"
-        strokeLinecap="square"
-        strokeLinejoin="miter"
-        fill="none"
-      />
-      <circle cx="20" cy="21.5" r="2.4" fill="var(--color-accent)" />
-    </svg>
+     <svg width={s} height={s} viewBox="0 0 40 40" fill="none" aria-hidden xmlns="http://www.w3.org/2000/svg">
+        {/* Outer scanning ring */}
+        <circle cx="20" cy="20" r="16" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4 4" />
+        
+        {/* Inner solid ring */}
+        <circle cx="20" cy="20" r="8" stroke="currentColor" strokeWidth="2.5" />
+        
+        {/* Absolute center point */}
+        <circle cx="20" cy="20" r="3.5" fill="var(--color-accent)" />
+        
+        {/* Crosshairs */}
+        <path d="M20 0 V8 M20 32 V40 M0 20 H8 M32 20 H40" stroke="var(--color-accent)" strokeWidth="2" />
+     </svg>
   );
 }
 
