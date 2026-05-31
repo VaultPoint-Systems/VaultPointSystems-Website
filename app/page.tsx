@@ -19,7 +19,7 @@ export default function Home() {
               href="#contact"
               className="inline-flex items-center h-9 px-4 bg-[var(--color-ink)] text-white font-semibold hover:bg-[var(--color-accent)] transition-colors"
             >
-              Get a free assessment
+              Contact
             </a>
           </nav>
         </div>
