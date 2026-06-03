@@ -48,8 +48,8 @@ export function ContactForm() {
 
   if (state.status === "sent") {
     return (
-      <div className="border-2 border-[var(--color-ink)] bg-[var(--color-surface)] p-6">
-        <p className="ticker mb-2">Message received</p>
+      <div className="border border-[var(--color-ink)] bg-[var(--color-surface)] p-6">
+        <p className="eyebrow mb-2">Message received</p>
         <p className="text-[var(--color-ink)] font-medium">Thanks. We&rsquo;ll get back to you at the email you provided.</p>
         <button
           type="button"
@@ -113,7 +113,7 @@ function Field({
     "w-full bg-[var(--color-surface)] border border-[var(--color-rule)] px-3.5 py-2.5 text-[15px] text-[var(--color-ink)] placeholder-[var(--color-ink-mute)] focus:outline-none focus:border-[var(--color-ink)] transition-colors";
   return (
     <label className="block">
-      <span className="ticker block mb-1.5">{label}</span>
+      <span className="block mb-1.5 text-[13px] font-medium text-[var(--color-ink-dim)]">{label}</span>
       {textarea ? (
         <textarea name={name} required={required} rows={5} className={common} />
       ) : (

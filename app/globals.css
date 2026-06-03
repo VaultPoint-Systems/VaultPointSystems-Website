@@ -15,6 +15,19 @@
   --color-accent-soft: #efd9d2;
   --color-warn: #a8651e;
   --color-warn-soft: #f1e2c8;
+  --color-ok: #2f7d4f;
+  --color-ok-soft: #d8e8dc;
+
+  /* Dark technical panels: where the product/data UI lives, so the site
+     reads as a security platform rather than an editorial magazine. */
+  --color-slate: #0d1117;
+  --color-slate-2: #161b22;
+  --color-slate-line: #272d36;
+  --color-slate-ink: #e6edf3;
+  --color-slate-dim: #9aa4b2;
+  --color-slate-mute: #6e7681;
+  --color-signal: #3fb37f;
+  --color-signal-amber: #d29a3a;
 }
 
 html, body {
@@ -31,31 +44,59 @@ html, body {
 }
 
 .font-sans { font-family: var(--font-sans), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+.font-display { font-family: var(--font-display), Georgia, "Times New Roman", serif; }
 .font-mono { font-family: var(--font-mono), ui-monospace, monospace; }
 
 ::selection { background: var(--color-accent); color: #ffffff; }
 
-.dot-ok { background: var(--color-accent); }
+.dot-ok { background: var(--color-ok); }
 .dot-warn { background: var(--color-warn); }
-.tag-ok { background: var(--color-accent-soft); color: var(--color-accent); }
+.tag-ok { background: var(--color-ok-soft); color: var(--color-ok); }
 .tag-warn { background: var(--color-warn-soft); color: var(--color-warn); }
 
-.chapter {
-  font-family: var(--font-mono), ui-monospace, monospace;
-  font-size: 11px;
-  letter-spacing: 0.06em;
-  color: var(--color-ink-mute);
+/* Status pills inside the dark report panel. */
+.tag-ok-dark { color: var(--color-signal); }
+.tag-warn-dark { color: var(--color-signal-amber); }
+
+/* Eyebrow variant for dark panels. */
+.eyebrow-dark {
+  font-family: var(--font-display), Georgia, serif;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--color-slate-dim);
 }
 
-.ticker {
+/* Editorial section label: serif italic, sentence case. Replaces the
+   uppercase-mono "§0X / LABEL" markers that read as machine-generated. */
+.eyebrow {
+  font-family: var(--font-display), Georgia, serif;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--color-ink-dim);
+}
+
+/* Small mono label, used only inside the audit-report mock where a
+   monospace document treatment is contextually genuine. */
+.doc-label {
   font-family: var(--font-mono), ui-monospace, monospace;
   font-size: 11px;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--color-ink-mute);
 }
 
-.rule-thick { border-top: 2px solid var(--color-ink); }
+.doc-label-dark {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-slate-mute);
+}
+
 .rule-thin  { border-top: 1px solid var(--color-rule); }
 
 @keyframes fillBar {
@@ -66,5 +107,9 @@ html, body {
 .score-bar {
   animation: fillBar 1.5s ease-out forwards;
   height: 100%;
-  background-color: var(--color-accent);
+  background-color: var(--color-signal);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .score-bar { animation: none; width: 78%; }
 }
