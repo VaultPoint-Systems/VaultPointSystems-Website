@@ -50,8 +50,8 @@ export default function AboutPage() {
             </div>
             <div className="lg:col-span-8 space-y-5 text-[17px] leading-[1.7] text-[var(--color-ink-dim)] max-w-2xl">
               <p>
-                Enterprise security is a mature, well-funded industry. The tools
-                are powerful, the consultants are excellent, and almost none of
+                Enterprise security is a mature, but its not suitable for all businesses. The tools
+                are powerful, however they are expensive, and almost none of
                 it is built for a ten-person company.
               </p>
               <p>

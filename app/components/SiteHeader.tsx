@@ -87,6 +87,7 @@ export function SiteHeader() {
           </div>
 
           <NavLink href="/about" active={pathname === "/about"}>About</NavLink>
+          <NavLink href="/risk-to-you" active={pathname === "/risk-to-you"}>Risk to You</NavLink>
 
           <Link
             href="/contact"

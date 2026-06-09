@@ -24,6 +24,7 @@ export function SiteFooter() {
             title="Company"
             links={[
               { label: "About", href: "/about" },
+              { label: "Risk to You", href: "/risk-to-you" },
               { label: "Contact", href: "/contact" },
             ]}
           />

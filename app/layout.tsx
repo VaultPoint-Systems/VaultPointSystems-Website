@@ -1,20 +1,21 @@
 import type { Metadata } from "next";
-import { Hanken_Grotesk, Fraunces, JetBrains_Mono } from "next/font/google";
+import { DM_Sans, DM_Serif_Display, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "./components/SiteHeader";
 import { SiteFooter } from "./components/SiteFooter";
 
-const sans = Hanken_Grotesk({
+const sans = DM_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
 });
 
-const display = Fraunces({
+const display = DM_Serif_Display({
   subsets: ["latin"],
   variable: "--font-display",
   style: ["normal", "italic"],
   display: "swap",
+  weight: ["400"],
 });
 
 const mono = JetBrains_Mono({
