@@ -5,14 +5,14 @@ import { RiskGuardReport } from "../../components/RiskGuardReport";
 export const metadata: Metadata = {
   title: "RiskGuard — VaultPoint Systems",
   description:
-    "RiskGuard checks your business against CIS IG1 and gives you a clear list of what to fix. Self-serve, AI-assisted, built for teams without a security person.",
+    "RiskGuard checks your business against industry security standards and gives you a clear list of what to fix. Self-serve, AI-assisted, built for teams without a security person.",
 };
 
 const STEPS = [
   {
     n: "1",
-    title: "Start with CIS IG1",
-    body: "RiskGuard measures you against CIS IG1, the essential security baseline.",
+    title: "Start with Security Baselines",
+    body: "RiskGuard measures you against industry standards, the essential security baselines.",
   },
   {
     n: "2",
@@ -139,36 +139,23 @@ export default function RiskGuardPage() {
         </Container>
       </section>
 
-      {/* What CIS IG1 is */}
+      {/* What Security Standards Are */}
       <section className="border-b border-[var(--color-rule)] bg-[var(--color-bg-2)]">
         <Container className="py-20 lg:py-24">
           <div className="grid lg:grid-cols-12 gap-x-12 gap-y-8 items-start">
             <div className="lg:col-span-5">
-              <h2 className="font-display text-[44px] sm:text-[56px] leading-none">CIS IG1</h2>
+              <h2 className="font-display text-[44px] sm:text-[56px] leading-none">Security Baselines</h2>
               <p className="mt-3 text-[14px] text-[var(--color-ink-mute)]">Essential cyber hygiene</p>
             </div>
             <div className="lg:col-span-7 space-y-5 text-[17px] leading-[1.75] text-[var(--color-ink-dim)] max-w-2xl lg:pt-2">
               <p>
-                <a
-                  href="https://www.cisecurity.org/controls/implementation-groups/ig1"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[var(--color-ink)] underline underline-offset-4 decoration-[var(--color-rule-strong)] hover:decoration-[var(--color-accent)] hover:text-[var(--color-accent)] transition-colors"
-                >
-                  CIS Implementation Group 1
-                </a>{" "}
-                is a set of basic safeguards: multi-factor login, real backups,
-                control over who has admin access. The foundation that blocks the
-                most common attacks on small businesses.
+                Industry security standards define the foundational controls every business should have: multi-factor login, real backups, and careful control over who has admin access. These are the essentials that block the most common attacks on small businesses.
               </p>
               <p>
-                It&rsquo;s widely recognized and reachable without a security
-                team. RiskGuard turns it into questions about your own setup, then
-                flags the gaps.
+                These standards are widely recognized and reachable without a security team. RiskGuard turns them into questions about your own setup, then flags the gaps and helps you fix them.
               </p>
               <p className="text-[var(--color-ink-mute)]">
-                CIS IG1 is the starting point. More frameworks follow as customers
-                need them.
+                RiskGuard starts with industry-standard baselines and grows as your security maturity grows.
               </p>
             </div>
           </div>

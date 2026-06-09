@@ -41,11 +41,11 @@ export default function Home() {
                 Meet <span className="text-[var(--color-accent)]">RiskGuard</span>.
               </h2>
               <p className="mt-5 text-[16px] leading-[1.7] text-[var(--color-ink-dim)] max-w-md">
-                RiskGuard checks your business against CIS IG1 and gives you a
+                RiskGuard checks your business against industry security standards and gives you a
                 clear list of what to fix. No consultant, no months of waiting.
               </p>
               <p className="mt-4 text-[14px] text-[var(--color-ink-mute)]">
-                Starting with CIS IG1 essential cyber hygiene, with more to come.
+                Starting with essential security baselines, with more to come.
               </p>
               <div className="mt-7 flex flex-wrap items-center gap-3">
                 <ButtonPrimary href="/products/riskguard">See how it works &rarr;</ButtonPrimary>
