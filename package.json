@@ -2,11 +2,16 @@
   "name": "vaultpoint-website",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "pages:dev": "wrangler pages dev .next",
+    "pages:deploy": "wrangler pages deploy .next --project-name vaultpointsystems-website --branch main"
   },
   "dependencies": {
     "next": "15.5.18",
@@ -19,6 +24,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "tailwindcss": "^4.0.0",
-    "typescript": "^5"
+    "typescript": "^5",
+    "wrangler": "^4.0.0"
   }
 }
