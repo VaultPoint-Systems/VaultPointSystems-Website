@@ -10,8 +10,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "pages:dev": "wrangler pages dev .next",
-    "pages:deploy": "wrangler pages deploy .next --branch main"
+    "pages:dev": "wrangler pages dev out",
+    "pages:deploy": "npm run build && wrangler pages deploy out --branch main"
   },
   "dependencies": {
     "next": "15.5.18",
