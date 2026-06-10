@@ -11,7 +11,7 @@
     "start": "next start",
     "lint": "next lint",
     "pages:dev": "wrangler pages dev .next",
-    "pages:deploy": "wrangler pages deploy .next --project-name vaultpointsystems-website --branch main"
+    "pages:deploy": "wrangler pages deploy .next --branch main"
   },
   "dependencies": {
     "next": "15.5.18",

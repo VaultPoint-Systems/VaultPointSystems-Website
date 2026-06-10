@@ -34,6 +34,8 @@ production domain (vaultpoint.systems) at the deployment.
 ### Local CLI deployment with Wrangler
 - Install Wrangler locally: `npm install`
 - Start Pages locally: `npm run pages:dev`
-- Deploy to Pages: `npm run pages:deploy`
+- Deploy to Pages manually: `npm run pages:deploy`
 
-Replace `YOUR_PAGES_PROJECT_NAME` with the Cloudflare Pages project name before deploying.
+> If you already have Cloudflare Pages connected to this repository, pushes to `main` will auto-deploy and you do not need to run `npm run pages:deploy`.
+
+If you do use `npm run pages:deploy`, make sure the Cloudflare Pages project exists in your account. Wrangler will prompt to create a project if the configured project name is not found. For non-interactive use, set the correct Pages project name in `wrangler.toml` or pass `--project-name YOUR_PROJECT_NAME`.
