@@ -8,7 +8,7 @@ export function ButtonPrimary({ href, children }: { href: string; children: Reac
   return (
     <Link
       href={href}
-      className="inline-flex items-center h-11 px-5 bg-[var(--color-accent)] text-white font-semibold text-[14px] tracking-tight hover:bg-[var(--color-accent-deep)] transition-colors"
+      className="inline-flex min-h-11 items-center justify-center px-5 py-2.5 bg-[var(--color-accent)] text-white font-semibold text-[14px] tracking-tight hover:bg-[var(--color-accent-deep)] transition-colors"
     >
       {children}
     </Link>
@@ -19,7 +19,7 @@ export function ButtonGhost({ href, children }: { href: string; children: React.
   return (
     <Link
       href={href}
-      className="inline-flex items-center h-11 px-5 border border-[var(--color-ink)] text-[var(--color-ink)] font-semibold text-[14px] tracking-tight hover:bg-[var(--color-ink)] hover:text-white transition-colors"
+      className="inline-flex min-h-11 items-center justify-center px-5 py-2.5 border border-[var(--color-ink)] text-[var(--color-ink)] font-semibold text-[14px] tracking-tight hover:bg-[var(--color-ink)] hover:text-white transition-colors"
     >
       {children}
     </Link>

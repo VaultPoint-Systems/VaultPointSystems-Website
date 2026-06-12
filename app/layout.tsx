@@ -27,11 +27,11 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "VaultPoint Systems",
   description:
-    "VaultPoint Systems builds accessible cybersecurity for startups and small businesses.",
+    "VaultPoint Systems builds clear operational software for startups and small businesses.",
   metadataBase: new URL("https://vaultpoint.systems"),
   openGraph: {
     title: "VaultPoint Systems",
-    description: "Cybersecurity for startups and small businesses.",
+    description: "Operational software for startups and small businesses.",
     url: "https://vaultpoint.systems",
     siteName: "VaultPoint Systems",
     type: "website",

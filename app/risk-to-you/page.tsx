@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Container, ButtonPrimary } from "../components/ui";
 
 export const metadata: Metadata = {
-  title: "Risk to You — VaultPoint Systems",
+  title: "Security Risk Data - VaultPoint Systems",
   description:
     "The threat landscape for small businesses in 2026. Current statistics on cyber attacks, financial impact, and preparedness gaps.",
 };
@@ -190,7 +190,7 @@ export default function RiskToYouPage() {
       {/* Hero Section */}
       <section className="border-b border-[var(--color-rule)]">
         <Container className="py-20 lg:py-28">
-          <p className="eyebrow mb-8">Risk to You</p>
+          <p className="eyebrow mb-8">Security risk data</p>
           <p className="font-display text-[28px] sm:text-[38px] lg:text-[46px] leading-[1.22] tracking-[-0.01em] max-w-4xl">
             The threat landscape for small businesses is{" "}
             <em className="italic text-[var(--color-accent)]">accelerating</em>.

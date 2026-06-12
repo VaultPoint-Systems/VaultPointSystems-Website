@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Container, ButtonPrimary } from "../../components/ui";
 import { RiskGuardReport } from "../../components/RiskGuardReport";
 
@@ -46,13 +47,19 @@ export default function RiskGuardPage() {
   return (
     <main>
       {/* Hero */}
-      <section className="border-b border-[var(--color-rule)]">
-        <Container className="py-20 lg:py-24">
+      <section className="border-b border-[var(--color-rule)] bg-[var(--color-surface)]">
+        <Container className="py-16 lg:py-20">
+          <div className="mb-10 flex flex-wrap items-center justify-between gap-3 border-b border-[var(--color-rule)] pb-4">
+            <p className="doc-label">Product / RiskGuard</p>
+            <p className="font-mono text-[11px] text-[var(--color-ink-mute)]">security readiness system</p>
+          </div>
           <div className="grid lg:grid-cols-12 gap-x-12 gap-y-12 items-center">
             <div className="lg:col-span-5">
-              <p className="text-[13px] font-medium text-[var(--color-ink-mute)]">
-                RiskGuard &middot; in development, launching 2026
-              </p>
+              <div className="mb-5 inline-flex border border-[var(--color-rule-strong)] bg-[var(--color-bg)] px-3 py-2">
+                <p className="text-[13px] font-medium text-[var(--color-ink-mute)]">
+                  In development &middot; launching 2026
+                </p>
+              </div>
               <h1 className="mt-5 font-display text-[44px] sm:text-[56px] leading-[1.03] tracking-[-0.015em] font-medium">
                 Prove your security.{" "}
                 <span className="text-[var(--color-accent)]">Skip the consultant</span>.
@@ -186,8 +193,35 @@ export default function RiskGuardPage() {
         </Container>
       </section>
 
-      {/* Continuous readiness */}
+      {/* Evidence */}
       <section className="border-b border-[var(--color-rule)] bg-[var(--color-bg-2)]">
+        <Container className="py-20 lg:py-24">
+          <div className="grid lg:grid-cols-12 gap-x-12 gap-y-8 items-start">
+            <div className="lg:col-span-4">
+              <p className="eyebrow">Why this matters</p>
+            </div>
+            <div className="lg:col-span-8 max-w-2xl">
+              <p className="font-display text-[26px] sm:text-[34px] leading-[1.25] tracking-[-0.01em]">
+                Small businesses are being targeted faster than they are being equipped.
+              </p>
+              <p className="mt-6 text-[17px] leading-[1.75] text-[var(--color-ink-dim)]">
+                We keep the supporting threat data separate from the main product
+                flow, but close enough for teams that need the business case for
+                security readiness.
+              </p>
+              <Link
+                href="/risk-to-you"
+                className="mt-7 inline-flex min-h-11 items-center justify-center border border-[var(--color-ink)] px-5 py-2.5 text-[14px] font-semibold tracking-tight text-[var(--color-ink)] hover:bg-[var(--color-ink)] hover:text-white transition-colors"
+              >
+                View the risk data &rarr;
+              </Link>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Continuous readiness */}
+      <section className="border-b border-[var(--color-rule)]">
         <Container className="py-20 lg:py-24">
           <div className="max-w-3xl">
             <p className="font-display text-[26px] sm:text-[34px] leading-[1.25] tracking-[-0.01em]">

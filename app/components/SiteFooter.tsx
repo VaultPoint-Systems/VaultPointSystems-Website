@@ -14,17 +14,23 @@ export function SiteFooter() {
               <span className="text-[15px] font-semibold tracking-tight">VaultPoint Systems</span>
             </Link>
             <p className="mt-4 max-w-xs text-[14px] leading-relaxed text-[var(--color-ink-dim)]">
-              Accessible security tooling for the startups and small businesses
-              the industry tends to overlook.
+              Clear, self-maintaining software for startups and small businesses
+              running without extra operational staff.
             </p>
           </div>
 
-          <FooterCol title="Product" links={[{ label: "RiskGuard", href: "/products/riskguard" }]} />
+          <FooterCol
+            title="Product"
+            links={[
+              { label: "Command Center", href: "/products/command-center" },
+              { label: "RiskGuard", href: "/products/riskguard" },
+              { label: "Security risk data", href: "/risk-to-you" },
+            ]}
+          />
           <FooterCol
             title="Company"
             links={[
               { label: "About", href: "/about" },
-              { label: "Risk to You", href: "/risk-to-you" },
               { label: "Contact", href: "/contact" },
             ]}
           />

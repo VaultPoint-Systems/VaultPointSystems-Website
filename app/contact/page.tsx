@@ -3,7 +3,7 @@ import { Container } from "../components/ui";
 import { ContactForm } from "../components/ContactForm";
 
 export const metadata: Metadata = {
-  title: "Contact — VaultPoint Systems",
+  title: "Contact - VaultPoint Systems",
   description: "Questions, concerns, or just curious? Send VaultPoint Systems a note.",
 };
 
@@ -22,8 +22,8 @@ export default function ContactPage() {
                 <br />or just curious?
               </h1>
               <p className="mt-5 text-[16px] leading-[1.7] text-[var(--color-ink-dim)] max-w-sm">
-                Send us a note about your team, your stack, or RiskGuard early
-                access. We read every message.
+                Send us a note about your team, your stack, Command Center, or
+                RiskGuard early access. We read every message.
               </p>
               <div className="mt-8 border-t border-[var(--color-rule)] pt-5">
                 <p className="text-[13px] text-[var(--color-ink-mute)]">Prefer email?</p>
