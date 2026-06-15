@@ -7,7 +7,7 @@ import { Mark } from "./brand";
 
 const PRODUCTS = [
   {
-    href: "/products/command-center",
+    href: "https://c2.vaultpoint.systems",
     name: "Command Center",
     blurb: "A self-maintaining workspace for small teams.",
   },

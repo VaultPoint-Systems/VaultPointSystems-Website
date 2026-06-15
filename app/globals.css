@@ -28,6 +28,15 @@
   --color-slate-mute: #6e7681;
   --color-signal: #3fb37f;
   --color-signal-amber: #d29a3a;
+  
+  --color-border: var(--color-slate-line);
+  --color-background: var(--color-slate);
+  --color-foreground: var(--color-slate-ink);
+  --color-card: var(--color-slate-2);
+  --color-muted: #1e2530;
+  --color-muted-foreground: var(--color-slate-dim);
+  --color-primary: var(--color-signal);
+  --color-primary-foreground: #ffffff;
 }
 
 html, body {
