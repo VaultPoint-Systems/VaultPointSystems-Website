@@ -3,6 +3,7 @@ import { Mark } from "./brand";
 
 const SITE_DOMAIN = "vaultpoint.systems";
 
+
 export function SiteFooter() {
   return (
     <footer className="border-t border-[var(--color-ink)] bg-[var(--color-bg-2)]">
@@ -10,8 +11,8 @@ export function SiteFooter() {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-2.5">
-              <Mark small />
-              <span className="text-[15px] font-semibold tracking-tight">VaultPoint Systems</span>
+              <Mark />
+              <span className="text-[16px] font-semibold tracking-tight">VaultPoint Systems</span>
             </Link>
             <p className="mt-4 max-w-xs text-[14px] leading-relaxed text-[var(--color-ink-dim)]">
               Clear, self-maintaining software for startups and small businesses

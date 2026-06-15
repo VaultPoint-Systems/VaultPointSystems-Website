@@ -37,9 +37,12 @@ export default function Home() {
         <Container className="py-20 lg:py-28">
           <div className="grid lg:grid-cols-12 gap-x-12 gap-y-12 items-center">
             <div className="lg:col-span-5">
-              <p className="eyebrow mb-4">Our first product</p>
+              <div className="flex items-center gap-2 mb-4">
+                <img src="/vaultpoint-c2-black.svg" alt="VaultPoint C2" className="h-6 w-auto" />
+                <span className="font-mono text-[13px] font-bold tracking-tight text-[var(--color-ink)]">VAULTPOINT :: <span className="text-[#3676df]">C2</span></span>
+              </div>
               <h2 className="font-display text-3xl sm:text-[40px] font-medium tracking-tight leading-[1.12]">
-                Meet <span className="text-[var(--color-accent)]">Command Center</span>.
+                Meet <span className="text-[#3676df]">Command Center</span>.
               </h2>
               <p className="mt-5 text-[16px] leading-[1.7] text-[var(--color-ink-dim)] max-w-md">
                 A project and internal management workspace for small teams that
@@ -50,7 +53,12 @@ export default function Home() {
                 Built around clarity, simplicity, and connected work across the whole suite.
               </p>
               <div className="mt-7 flex flex-wrap items-center gap-3">
-                <ButtonPrimary href="https://c2.vaultpoint.systems">See the product &rarr;</ButtonPrimary>
+                <Link
+                  href="https://c2.vaultpoint.systems"
+                  className="inline-flex min-h-11 items-center justify-center px-5 py-2.5 bg-[#3676df] text-white font-semibold text-[14px] tracking-tight hover:bg-[#2b5eb2] transition-colors"
+                >
+                  See the product &rarr;
+                </Link>
               </div>
             </div>
             <div className="lg:col-span-7">

@@ -41,7 +41,7 @@ export function SiteHeader() {
 
   return (
     <header className="border-b border-[var(--color-rule)] bg-[var(--color-bg)]/90 backdrop-blur sticky top-0 z-40">
-      <div className="mx-auto max-w-[1200px] px-6 lg:px-10 min-h-16 flex items-center justify-between">
+      <div className="w-full px-6 lg:px-10 min-h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2.5">
           <Mark />
           <span className="text-[16px] font-semibold tracking-tight">VaultPoint Systems</span>
@@ -124,7 +124,7 @@ export function SiteHeader() {
       </div>
       {mobileOpen && (
         <nav id="mobile-navigation" className="md:hidden border-t border-[var(--color-rule)] bg-[var(--color-bg)]">
-          <div className="mx-auto max-w-[1200px] px-6 py-4">
+          <div className="w-full px-6 py-4">
             <div className="space-y-1">
               <p className="doc-label mb-2">Products</p>
               {PRODUCTS.map((p) => (
