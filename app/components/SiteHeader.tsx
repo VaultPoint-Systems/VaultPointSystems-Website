@@ -7,7 +7,7 @@ import { Mark } from "./brand";
 
 const PRODUCTS = [
   {
-    href: "https://c2.vaultpoint.systems",
+    href: "https://zetadeck.com",
     name: "Zetadeck",
     blurb: "A self-maintaining workspace for small teams.",
     icon: "/zetadeck-black.svg",

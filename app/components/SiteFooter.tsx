@@ -23,7 +23,7 @@ export function SiteFooter() {
           <FooterCol
             title="Product"
             links={[
-              { label: "Zetadeck", href: "https://c2.vaultpoint.systems" },
+              { label: "Zetadeck", href: "https://zetadeck.com" },
               { label: "RiskGuard", href: "/products/riskguard" },
               { label: "Security risk data", href: "/risk-to-you" },
             ]}

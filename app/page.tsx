@@ -24,7 +24,7 @@ export default function Home() {
                 pages, and software that tells you what matters.
               </p>
               <div className="mt-6 flex flex-wrap items-center gap-3">
-                <ButtonPrimary href="https://c2.vaultpoint.systems">Explore Zetadeck &rarr;</ButtonPrimary>
+                <ButtonPrimary href="https://zetadeck.com">Explore Zetadeck &rarr;</ButtonPrimary>
                 <ButtonGhost href="/products/riskguard">View RiskGuard</ButtonGhost>
               </div>
             </div>
@@ -54,7 +54,7 @@ export default function Home() {
               </p>
               <div className="mt-7 flex flex-wrap items-center gap-3">
                 <Link
-                  href="https://c2.vaultpoint.systems"
+                  href="https://zetadeck.com"
                   className="inline-flex min-h-11 items-center justify-center px-5 py-2.5 bg-[#3676df] text-white font-semibold text-[14px] tracking-tight hover:bg-[#2b5eb2] transition-colors"
                 >
                   See the product &rarr;
