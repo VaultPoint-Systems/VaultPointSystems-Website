@@ -1,9 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="19 15 62 68" width="100%" height="100%" role="img" aria-label="Zetadeck">
-  <g fill="none" stroke="#3676df" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
-    <!-- uppercase zeta (Z); its bottom bar is the first deck layer -->
-    <path d="M26 22 L74 22 L26 50 L74 50"/>
-    <!-- deck: two more layers, same width and weight, evenly spaced -->
-    <path d="M26 63 L74 63" opacity="0.85"/>
-    <path d="M26 76 L74 76" opacity="0.7"/>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="100%" height="100%">
+  <style>
+    .v-shape { fill: #000000; }
+    @media (prefers-color-scheme: dark) {
+      .v-shape { fill: #ffffff; }
+    }
+  </style>
+  <!-- Rebalanced V Shape with Raised Inner Cutouts -->
+  <path class="v-shape" d="M 50 150 L 290 150 L 443 405 L 398 480 L 260 250 L 200 250 L 500 750 L 800 250 L 740 250 L 602 480 L 557 405 L 710 150 L 950 150 L 500 900 Z" />
+  <!-- Center Dot -->
+  <circle cx="500" cy="545" r="55" fill="#9a2a1e" />
 </svg>

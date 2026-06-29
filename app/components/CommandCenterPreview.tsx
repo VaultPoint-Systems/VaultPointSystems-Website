@@ -28,9 +28,8 @@ export function CommandCenterPreview() {
         {/* Sidebar — exact replica of AppShell */}
         <div className="w-52 border-r border-border bg-card p-4 flex flex-col gap-1 hidden sm:flex">
           <div className="flex items-center gap-2 mb-6 px-2">
-            <span className="font-mono text-sm font-bold text-foreground tracking-tight">VAULTPOINT</span>
-            <span className="text-muted-foreground/50">::</span>
-            <span className="font-mono text-sm font-bold text-foreground">C2</span>
+            <img src="/zetadeck-black.svg" alt="" className="h-4 w-auto" />
+            <span className="font-mono text-sm font-bold text-foreground tracking-tight">ZETADECK</span>
           </div>
           
           <div className="space-y-0.5">
