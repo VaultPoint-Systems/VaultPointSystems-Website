@@ -22,7 +22,7 @@ export default function ContactPage() {
                 <br />or just curious?
               </h1>
               <p className="mt-5 text-[16px] leading-[1.7] text-[var(--color-ink-dim)] max-w-sm">
-                Send us a note about your team, your stack, Command Center, or
+                Send us a note about your team, your stack, Zetadeck, or
                 RiskGuard early access. We read every message.
               </p>
               <div className="mt-8 border-t border-[var(--color-rule)] pt-5">

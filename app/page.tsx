@@ -24,7 +24,7 @@ export default function Home() {
                 pages, and software that tells you what matters.
               </p>
               <div className="mt-6 flex flex-wrap items-center gap-3">
-                <ButtonPrimary href="https://c2.vaultpoint.systems">Explore Command Center &rarr;</ButtonPrimary>
+                <ButtonPrimary href="https://c2.vaultpoint.systems">Explore Zetadeck &rarr;</ButtonPrimary>
                 <ButtonGhost href="/products/riskguard">View RiskGuard</ButtonGhost>
               </div>
             </div>
@@ -38,11 +38,11 @@ export default function Home() {
           <div className="grid lg:grid-cols-12 gap-x-12 gap-y-12 items-center">
             <div className="lg:col-span-5">
               <div className="flex items-center gap-2 mb-4">
-                <img src="/vaultpoint-c2-black.svg" alt="VaultPoint C2" className="h-6 w-auto" />
-                <span className="font-mono text-[13px] font-bold tracking-tight text-[var(--color-ink)]">VAULTPOINT :: <span className="text-[#3676df]">C2</span></span>
+                <img src="/zetadeck-black.svg" alt="Zetadeck" className="h-6 w-auto" />
+                <span className="font-mono text-[13px] font-bold tracking-tight text-[var(--color-ink)]"><span className="text-[#3676df]">ZETADECK</span></span>
               </div>
               <h2 className="font-display text-3xl sm:text-[40px] font-medium tracking-tight leading-[1.12]">
-                Meet <span className="text-[#3676df]">Command Center</span>.
+                Meet <span className="text-[#3676df]">Zetadeck</span>.
               </h2>
               <p className="mt-5 text-[16px] leading-[1.7] text-[var(--color-ink-dim)] max-w-md">
                 A project and internal management workspace for small teams that

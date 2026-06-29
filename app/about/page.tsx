@@ -62,7 +62,7 @@ export default function AboutPage() {
               </p>
               <p className="text-[var(--color-ink)]">
                 We&rsquo;re building{" "}
-                <a href="https://c2.vaultpoint.systems" className="text-[var(--color-accent)] underline underline-offset-4 decoration-[var(--color-rule-strong)] hover:decoration-[var(--color-accent)] transition-colors">Command Center</a>
+                <a href="https://c2.vaultpoint.systems" className="text-[var(--color-accent)] underline underline-offset-4 decoration-[var(--color-rule-strong)] hover:decoration-[var(--color-accent)] transition-colors">Zetadeck</a>
                 {" "}for internal operations and{" "}
                 <a href="/products/riskguard" className="text-[var(--color-accent)] underline underline-offset-4 decoration-[var(--color-rule-strong)] hover:decoration-[var(--color-accent)] transition-colors">RiskGuard</a>,
                 a self-serve security audit, as one suite for clarity and control.
