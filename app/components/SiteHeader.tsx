@@ -10,11 +10,13 @@ const PRODUCTS = [
     href: "https://c2.vaultpoint.systems",
     name: "Zetadeck",
     blurb: "A self-maintaining workspace for small teams.",
+    icon: "/zetadeck-black.svg",
   },
   {
     href: "/products/riskguard",
     name: "RiskGuard",
     blurb: "Self-serve security audit for SMBs and startups.",
+    icon: null,
   },
 ];
 
@@ -99,6 +101,7 @@ export function SiteHeader() {
                       className="block px-4 py-3.5 hover:bg-[var(--color-bg-2)] transition-colors"
                     >
                       <span className="flex items-center gap-2">
+                        {p.icon && <img src={p.icon} alt="" className="h-4 w-auto" />}
                         <span className="font-semibold text-[15px] tracking-tight">{p.name}</span>
                         <span className="doc-label">{String(idx + 1).padStart(3, "0")}</span>
                       </span>
@@ -135,7 +138,10 @@ export function SiteHeader() {
                     pathname === p.href ? "text-[var(--color-ink)]" : "text-[var(--color-ink-dim)]"
                   }`}
                 >
-                  <span className="block font-semibold text-[15px] tracking-tight">{p.name}</span>
+                  <span className="flex items-center gap-2">
+                    {p.icon && <img src={p.icon} alt="" className="h-4 w-auto" />}
+                    <span className="font-semibold text-[15px] tracking-tight">{p.name}</span>
+                  </span>
                   <span className="mt-0.5 block text-[13px] leading-snug">{p.blurb}</span>
                 </Link>
               ))}
